@@ -3,26 +3,20 @@ class script(object):
 
 <blockquote>𝖨'𝗆 𝖠 𝖡𝖺𝗍𝖼𝗁 𝖥𝗂𝗅𝖾 𝖲𝗍𝗈𝗋𝖾 & 𝖨𝗇𝗅𝗂𝗇𝖾 𝖥𝗂𝗅𝖾 𝖲𝖾𝖺𝗋𝖼𝗁 𝖡𝗈𝗍.</blockquote>
 
-𝖧𝗂𝗍 /joinchannels 𝖳𝗈 𝖦𝖾𝗍 𝖮𝗎𝗋 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖫𝗂𝗌𝗍𝗌.
-
-𝖧𝗂𝗍 /help 𝗈𝗋 𝖳𝖺𝗉 𝖲𝖾𝖺𝗋𝖼𝗁 𝖧𝖾𝗋𝖾 & 𝖦𝖾𝗍 𝖲𝗍𝖺𝗋𝗍𝖾𝖽.</b>
+𝖧𝗂𝗍 /joinchannels 𝖳𝗈 𝖦𝖾𝗍 𝖮𝗎𝗋 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖫𝗂𝗌𝗍𝗌.</b>
 """
 
-    HELP_TXT = """<b>🔖 𝖸𝗈 {} ,  
-
-𝖧𝗂𝗍 /check 𝖳𝗈 𝖦𝖾𝗍 𝖫𝗂𝗌𝗍 𝖮𝖿 𝖠𝗏𝖺𝗂𝗅𝖺𝖻𝗅𝖾 𝖬𝗈𝗏𝗂𝖾𝗌 & 𝖲𝖾𝗋𝗂𝖾𝗌.
-𝖢𝗈𝗉𝗒 𝖳𝗁𝖾 𝖭𝖺𝗆𝖾 & 𝖲𝖾𝗇𝖽 𝖨𝗍 𝖳𝗈 𝖳𝗁𝖾 𝖡𝗈𝗍.
-
-𝖥𝗈𝗋𝗐𝖺𝗋𝖽 𝖳𝗁𝖾 𝖥𝗂𝗅𝖾𝗌 𝖳𝗈 𝖲𝖺𝗏𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌!
-
-📌 𝖧𝗂𝗍 /tutorial 𝖥𝗈𝗋 𝖳𝗎𝗍𝗈𝗋𝗂𝖺𝗅 𝖵𝗂𝖽𝖾𝗈.</b>
-"""
+    HELP_TXT = """<b>Hᴇʏ {} 𝖨𝖺𝗆 𝖧𝖺𝗉𝗉𝗒 🖤 𝖳𝗈 𝖧𝖺𝗏𝖾 𝖸𝗈𝗎
+    
+𝖶𝗂𝗍𝗁 𝖳𝗁𝗂𝗌 𝖧𝖾𝗅𝗉 𝖸𝗈𝗎 𝖶𝗂𝗅𝗅 𝖴𝗇𝖽𝖾𝗋𝗌𝗍𝖺𝗇𝖽 𝖧𝗈𝗐 𝖳𝗈 𝖴𝗌𝖾 𝖳𝗁𝗂𝗌 𝖡𝗈𝗍🏌️
+    
+𝖢𝗁𝖾𝖼𝗄 𝖡𝖾𝗅𝗈𝗐 𝖧𝖾𝗅𝗉 𝖥𝗎𝗇𝖼𝗍𝗂𝗈𝗇𝗌🤍</b>"""
 
     ABOUT_TXT = """<b>𝖰𝗎𝗂𝖼𝗄𝗅𝗒 𝖩𝗈𝗂𝗇 𝖮𝗎𝗋 𝖦𝗋𝗈𝗎𝗉𝗌 & 𝖢𝗁𝖺𝗇𝗇𝖾𝗅,
 𝖫𝖾𝗍 𝖳𝗁𝖾 𝖴𝗇𝗅𝗂𝗆𝗂𝗍𝖾𝖽 𝖥𝗎𝗇 𝖡𝖾𝗀𝗂𝗇.! 🚀</b>"""
 
     ABOUT_TEXT = """<b>
-○ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋 : <a href='https://t.me/piroxbots'>[𝖯𝗂𝖱𝖮]</a>
+○ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋 : <a href='https://t.me/MCU_ADMIN_V1_BOT'>[𝐍𝐚𝐳𝐫𝐢𝐲𝐚 𝐀𝐝𝐦𝐢𝐧]</a>
 ○ 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾 : <a href='https://www.python.org/downloads/release/python-3106/'>𝖯𝗒𝗍𝗁𝗈𝗇 𝟥</a>
 ○ 𝖲𝖾𝗋𝗏𝖾𝗋 : <a href='https://cloud.google.com/learn/what-is-a-virtual-private-server'>VPS</a>
 ○ 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 : <a href='https://www.mongodb.com'>𝖬𝗈𝗇𝗀𝗈𝖣𝖡 𝖥𝗋𝖾𝖾 𝖳𝗂𝖾𝗋</a></b>"""
