@@ -65,6 +65,8 @@ async def start(client, message):
                     InlineKeyboardButton('‼️ 𝖣𝖬𝖢𝖠', callback_data='dmca')
                 ],[
                     InlineKeyboardButton('🔍 𝖲𝖾𝖺𝗋𝖼𝗁 𝖧𝖾𝗋𝖾', switch_inline_query_current_chat='')
+                ],[
+                   InlineKeyboardButton('ᴀᴅᴍɪɴs ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs', callback_data='machu')
                 ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -85,6 +87,8 @@ async def start(client, message):
                     InlineKeyboardButton('‼️ 𝖣𝖬𝖢𝖠', callback_data='dmca')
                 ],[
                     InlineKeyboardButton('🔍 𝖲𝖾𝖺𝗋𝖼𝗁 𝖧𝖾𝗋𝖾', switch_inline_query_current_chat='')
+                ],[
+                   InlineKeyboardButton('ᴀᴅᴍɪɴs ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs', callback_data='machu')
                 ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(
