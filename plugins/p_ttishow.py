@@ -271,35 +271,6 @@ async def get_stats(bot, message):
         text=script.STATUS_TXT.format(total, users, chats, round(used_dbSize, 2), tot1, round(used_dbSize2, 2), tot2, round(used_dbSize3, 2), tot3, round(used_dbSize4, 2), tot4, round(used_dbSize5, 2), time),
         parse_mode=enums.ParseMode.HTML)
 
-@Client.on_message(filters.command('stats') & filters.incoming)
-async def get_ststs(bot, message):
-    rju = await message.reply('👀')
-    tot1 = await Media2.count_documents()
-    tot2 = await Media3.count_documents()
-    tot3 = await Media4.count_documents()
-    tot4 = await Media5.count_documents()
-    total = tot1 + tot2 + tot3 + tot4
-    users = await db.total_users_count()
-    chats = await db.total_chat_count()
-    stats = await clientDB.command('dbStats')
-    used_dbSize = (stats['dataSize']/(1024*1024))+(stats['indexSize']/(1024*1024))        
-    stats2 = await clientDB2.command('dbStats')
-    used_dbSize2 = (stats2['dataSize']/(1024*1024))+(stats2['indexSize']/(1024*1024))
-    stats3 = await clientDB3.command('dbStats')
-    used_dbSize3 = (stats3['dataSize']/(1024*1024))+(stats3['indexSize']/(1024*1024))  
-    stats4 = await clientDB4.command('dbStats')
-    used_dbSize4 = (stats4['dataSize']/(1024*1024))+(stats4['indexSize']/(1024*1024))  
-    stats5 = await clientDB5.command('dbStats')
-    used_dbSize5 = (stats5['dataSize']/(1024*1024))+(stats5['indexSize']/(1024*1024))  
-    current = temp.CURRENT
-    tz = pytz.timezone('Asia/Kolkata')
-    today = datetime.date.today()
-    now = datetime.datetime.now(tz)
-    time = now.strftime("%I:%M:%S %p - %d %b, %Y")
-    await rju.edit(
-        text=script.TOTAL_TXT.format(total, time),
-        parse_mode=enums.ParseMode.HTML)
-
 @Client.on_message(filters.command('tutorial'))
 async def tutorial(client, message):
     await message.reply_video(
@@ -327,7 +298,14 @@ async def help(client, message):
         ]]
         ),
         quote=True)
-
+    
+@Client.on_message(filters.command('admin') & filters.user(ADMINS))
+async def admins(bot, message):
+    await message.reply_text(
+        text=script.MCAHU_TXT,
+        parse_mode=enums.ParseMode.HTML
+    )
+        
 @Client.on_message(filters.command('about'))
 async def about(client, message):
     await message.reply_text(
