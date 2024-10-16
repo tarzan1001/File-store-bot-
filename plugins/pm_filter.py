@@ -470,6 +470,41 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
 
+    elif query.data == "stats":
+        await query.message.edit_text("ᴡᴀɪᴛ.....")
+        buttons = [[
+            InlineKeyboardButton('⬅️ ʙᴀᴄᴋ', callback_data='start'),            
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        tot1 = await Media2.count_documents()
+        tot2 = await Media3.count_documents()
+        tot3 = await Media4.count_documents()
+        tot4 = await Media5.count_documents()
+        total = tot1 + tot2 + tot3 + tot4
+        users = await db.total_users_count()
+        chats = await db.total_chat_count()
+        stats = await clientDB.command('dbStats')
+        used_dbSize = (stats['dataSize']/(1024*1024))+(stats['indexSize']/(1024*1024))        
+        stats2 = await clientDB2.command('dbStats')
+        used_dbSize2 = (stats2['dataSize']/(1024*1024))+(stats2['indexSize']/(1024*1024))
+        stats3 = await clientDB3.command('dbStats')
+        used_dbSize3 = (stats3['dataSize']/(1024*1024))+(stats3['indexSize']/(1024*1024))  
+        stats4 = await clientDB4.command('dbStats')
+        used_dbSize4 = (stats4['dataSize']/(1024*1024))+(stats4['indexSize']/(1024*1024))  
+        stats5 = await clientDB5.command('dbStats')
+        used_dbSize5 = (stats5['dataSize']/(1024*1024))+(stats5['indexSize']/(1024*1024))  
+        await query.message.edit_text(
+            text=script.STATUS_TXT.format(total, users, chats, round(used_dbSize, 2), tot1, round(used_dbSize2, 2), tot2, round(used_dbSize3, 2), tot3, round(used_dbSize4, 2), tot4, round(used_dbSize5, 2)),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+        if query.from_user.id in ADMINS:
+            await query.message.edit_text(text=script.STATUS_TXT.format(total, users, chats, monsize, free), reply_markup=reply_markup, parse_mode=enums.ParseMode.HTML)
+        else:
+            await query.answer("⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠\n\nIᴛꜱ ᴏɴʟʏ ғᴏʀ ᴍʏ ADMINS\n\n© [MCU] MOVIES", show_alert=True)
+            await query.message.edit_text(text="അഡ്മിൻസിന് മാത്രമേ കാണാൻ പറ്റുകയുള്ളൂ.. 🤗", reply_markup=reply_markup)
+
+
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
         grpid = await active_connection(str(query.from_user.id))
