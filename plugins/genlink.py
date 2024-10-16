@@ -51,7 +51,7 @@ async def gen_link_batch(bot, message):
     f_chat_id = match.group(4)
     f_msg_id = int(match.group(5))
     if f_chat_id.isnumeric():
-        f_chat_id  = int(("-100" + f_chat_id))
+        f_chat_id  = int(("-1001974433785" + f_chat_id))
 
     match = regex.match(last)
     if not match:
