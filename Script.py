@@ -20,6 +20,26 @@ class script(object):
 ○ 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾 : <a href='https://www.python.org/downloads/release/python-3106/'>𝖯𝗒𝗍𝗁𝗈𝗇 𝟥</a>
 ○ 𝖲𝖾𝗋𝗏𝖾𝗋 : <a href='https://cloud.google.com/learn/what-is-a-virtual-private-server'>VPS</a>
 ○ 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 : <a href='https://www.mongodb.com'>𝖬𝗈𝗇𝗀𝗈𝖣𝖡 𝖥𝗋𝖾𝖾 𝖳𝗂𝖾𝗋</a></b>"""
+   
+    MCAHU_TXT = """<b>The new command features are listed below. More features coming soon
+    
+/start - Welcome🤗 (Help , About and others)
+    
+/setchat - force Sub Channel ID
+
+/viewchat - which force sub running chek
+
+/delchat - Delete Requests (force Sub)
+
+/stats - Check Stats
+
+/deletefiles - Movie name all Files delete 
+
+/ping - Bot Speed , Cpu etc
+
+/restart - Restart ✅
+
+/logs - bot logs txt</b>"""
 
     STATUS_TXT = """<b><u>📂 𝖳𝗈𝗍𝖺𝗅 𝖥𝗂𝗅𝖾𝗌 -</u></b> <code>{}</code>
 
