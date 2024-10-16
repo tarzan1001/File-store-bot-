@@ -302,8 +302,7 @@ async def help(client, message):
 @Client.on_message(filters.command('admin') & filters.user(ADMINS))
 async def admins(bot, message):
     await message.reply_text(
-        text=script.MCAHU_TXT,
-        parse_mode=enums.ParseMode.HTML
+        text=script.MCAHU_TXT    
     )
         
 @Client.on_message(filters.command('about'))
