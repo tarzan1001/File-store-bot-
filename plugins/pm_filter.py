@@ -404,7 +404,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             file_id=file_id,
             caption=f_caption,
             protect_content=True if ident == 'checksubp' else False,
-            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f"https://t.me/MCUupdatesLINKS"),InlineKeyboardButton('⭕️ 𝐌𝐎𝐕𝐈𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1")]  ))
+            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f"https://t.me/MCUupdatesLINKS"),InlineKeyboardButton('⭕️ 𝐌𝐎𝐕𝐈𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1")]]))
         ok = await message.reply_text(
             text=script.DELETE_TXT,
             disable_web_page_preview=True,   
