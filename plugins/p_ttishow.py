@@ -34,8 +34,8 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/raixchat'),
-            InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url=f'https://t.me/piroxbots')
+            InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/+2FCs53JjHZo0MmZl'),
+            InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url=f'https://t.me/MCUupdatesLINKS')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -100,7 +100,7 @@ async def disable_chat(bot, message):
     await message.reply('Chat Successfully Disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/raixchat')
+            InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/+2FCs53JjHZo0MmZl')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
@@ -336,9 +336,9 @@ async def about(client, message):
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('🚀 𝖯𝖨𝖱𝖮 𝖡𝖮𝖳𝖲 🚀', url=f"https://t.me/piroxbots")
+            InlineKeyboardButton('🚀 𝖯𝖨𝖱𝖮 𝖡𝖮𝖳𝖲 🚀', url=f"https://t.me/+2FCs53JjHZo0MmZl")
         ],[
-            InlineKeyboardButton('👥 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 💭', url=f"https://t.me/raixchat")
+            InlineKeyboardButton('👥 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 💭', url=f"https://t.me/MCUupdatesLINKS")
         ]]
         ),
         quote=True)
