@@ -246,5 +246,5 @@ async def send_file(client, message, ident, file_id):
     await message.reply_text(
          text="<b>Your File Has Been Deleted To Avoid BOT Ban.😇\nYou Can Request Again If You Want!🫵🏻</b>",
          disable_web_page_preview=True,   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👥 𝖴𝗉𝖽𝖺𝗍𝖾 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 💭", url=f"https://t.me/blasterindex")]]))
+         ]))
     return
