@@ -25,7 +25,7 @@ class script(object):
     
 /start - Welcome🤗 (Help , About and others)
     
-/setchat - force Sub Channel ID
+/setf1 - force Sub Channel ID
 
 /viewchat - which force sub running chek
 
