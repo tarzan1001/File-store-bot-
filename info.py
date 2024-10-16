@@ -18,33 +18,33 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+API_ID = int(environ.get('API_ID', '19071424'))
+API_HASH = environ.get('API_HASH', 'c4b3e298cc50fd4cc563ae75ee882948')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7697119880:AAHE3IXLG_pT3VOYgmcwfVUC3WK7XIZ0THs')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5705117542 6625690100').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7425490417').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001767342018 -1002142588188').split()]
-JOIN_CHANNELS = [int(-1001500383895), int(-1002008766585), int(-1001671558650)]
-PIRO_CHANNELS = [int(-1001658823824)]
+JOIN_CHANNELS = [int(-1002305942155), int(-1002439612344), int(-1002340520395)]
+PIRO_CHANNELS = [int(-1002323077913)]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # MongoDB information
 #DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://rai:rai@cluster0.zcrha.mongodb.net/?retryWrites=true&w=majority")
 
-# MongoDB information
-DATABASE_NAME = environ.get('DATABASE_NAME', "PIRO")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', "FILES")
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_URI2 = environ.get('DATABASE_URI2', "")
-DATABASE_URI3 = environ.get('DATABASE_URI3', "")
-DATABASE_URI4 = environ.get('DATABASE_URI4', "")
-DATABASE_URI5 = environ.get('DATABASE_URI5', "")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Manaf")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Manaf:Manaf@cluster0.h8xkden.mongodb.net/")
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://Mamithav2:Mamithav2@cluster0.8uofp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI3 = environ.get('DATABASE_URI3', "mongodb+srv://Mamithav3:Mamithav3@cluster0.gdwtz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI4 = environ.get('DATABASE_URI4', "mongodb+srv://Mamithav4:Mamithav4@cluster0.xy8lu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI5 = environ.get('DATABASE_URI5', "mongodb+srv://Mamithav5:Mamithav5@cluster0.g7tzh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+                            
 
 # FSUB
 auth_channel = environ.get('AUTH_CHANNEL')
@@ -58,7 +58,7 @@ REQ_CHANNEL2 = (int(REQ_CHANNEL2) if REQ_CHANNEL2 and id_pattern.search(REQ_CHAN
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 
 # Others
-LOG_CHANNEL = -1002069602616
+LOG_CHANNEL = -1002276401285
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
@@ -72,7 +72,7 @@ INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
-PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), True)
+PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), false)
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
