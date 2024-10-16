@@ -27,11 +27,13 @@ class script(object):
     
 /setf1 - force Sub Channel ID
 
-/viewchat - which force sub running chek
+/viewf1 - which force sub running chek
 
-/delchat - Delete Requests (force Sub)
+/delf1 - Delete Requests (force Sub)
 
-/stats - Check Stats
+/totalr1 - total req
+
+/status - Check Stats
 
 /deletefiles - Movie name all Files delete 
 
