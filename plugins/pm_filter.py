@@ -420,8 +420,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
                     InlineKeyboardButton('😇 𝖲𝗎𝗋𝗉𝗋𝗂𝗌𝖾', callback_data='about'),
                     InlineKeyboardButton('‼️ 𝖣𝖬𝖢𝖠', callback_data='dmca')
-                ],[
+                ],[            
                     InlineKeyboardButton('🔍 𝖲𝖾𝖺𝗋𝖼𝗁 𝖧𝖾𝗋𝖾', switch_inline_query_current_chat='')
+                ],[
+                    InlineKeyboardButton('ᴀᴅᴍɪɴs ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs', callback_data='machu')
                 ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -430,7 +432,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
             disable_web_page_preview=True,
             parse_mode=enums.ParseMode.HTML
         )
-        await query.answer('Piracy Is Crime')
+        
+    elif query.data == "machu":
+        if query.from_user.id not in ADMINS:
+            await query.answer("മോനെ അത് ലോക്കാ ❌", show_alert=True)
+            return
+        buttons = [[
+            InlineKeyboardButton('👩‍🦯 𝖡𝖺𝖼𝗄', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)        
+        await query.message.edit_text(
+            text=script.MCAHU_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+        
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton("👥 𝗚𝗥𝗢𝗨𝗣 - 𝟭", url=f"https://t.me/+JRWRXAzDwkc2NDA1"),
