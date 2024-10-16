@@ -65,7 +65,8 @@ async def next_page(bot, query):
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
     try:
-        n_offset = int(n_offseCallbackQuery, :
+        n_offset = int(n_offset)
+    except:
         n_offset = 0
 
     if not files:
