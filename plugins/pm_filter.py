@@ -2,6 +2,7 @@ import asyncio
 import re
 import ast
 import math
+import random
 import time
 import requests
 from bs4 import BeautifulSoup
@@ -11,8 +12,8 @@ import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
 from info import ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION, P_TTI_SHOW_OFF, IMDB, \
-    SPELL_CHECK_REPLY, IMDB_TEMPLATE, SINGLE_BUTTON, BATCH_FILE_CAPTION
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+    SPELL_CHECK_REPLY, IMDB_TEMPLATE, SINGLE_BUTTON, BATCH_FILE_CAPTION, PICS
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
 from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings
@@ -64,8 +65,7 @@ async def next_page(bot, query):
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
     try:
-        n_offset = int(n_offset)
-    except:
+        n_offset = int(n_offseCallbackQuery, :
         n_offset = 0
 
     if not files:
@@ -440,7 +440,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('👩‍🦯 𝖡𝖺𝖼𝗄', callback_data='start')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)        
+        reply_markup = InlineKeyboardMarkup(buttons) 
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
         await query.message.edit_text(
             text=script.MCAHU_TXT,
             reply_markup=reply_markup,
@@ -465,6 +470,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🗣 ᴀᴅᴍɪɴ', url=f"https://t.me/MCU_ADMIN_V1_BOT")                               
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
@@ -477,6 +487,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('👨🏻‍💻 𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖠𝖽𝗆𝗂𝗇', url=f"https://t.me/MCU_ADMIN_V1_BOT")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
         await query.message.edit_text(
             text=script.DMCA_TXT,
             reply_markup=reply_markup,
