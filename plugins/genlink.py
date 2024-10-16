@@ -51,7 +51,7 @@ async def gen_link_batch(bot, message):
     f_chat_id = match.group(4)
     f_msg_id = int(match.group(5))
     if f_chat_id.isnumeric():
-        f_chat_id  = int(("-1002206726320" + f_chat_id))
+        f_chat_id  = int(("-100" + f_chat_id))
 
     match = regex.match(last)
     if not match:
@@ -59,7 +59,7 @@ async def gen_link_batch(bot, message):
     l_chat_id = match.group(4)
     l_msg_id = int(match.group(5))
     if l_chat_id.isnumeric():
-        l_chat_id  = int(("-1002206726320" + l_chat_id))
+        l_chat_id  = int(("-100" + l_chat_id))
 
     if f_chat_id != l_chat_id:
         return await message.reply("Chat ids not matched.")
@@ -76,7 +76,7 @@ async def gen_link_batch(bot, message):
     if chat_id in FILE_STORE_CHANNEL:
         string = f"{f_msg_id}_{l_msg_id}_{chat_id}_{cmd.lower().strip()}"
         b_64 = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
-        return await sts.edit(f"Here is your link \n\n<code>https://t.me/{temp.U_NAME}?start=DSTORE-{b_64}</code>")
+        return await sts.edit(f"Here is your link https://t.me/{temp.U_NAME}?start=DSTORE-{b_64}")
 
     FRMT = "Generating Link...\nTotal Messages: `{total}`\nDone: `{current}`\nRemaining: `{rem}`\nStatus: `{sts}`"
 
