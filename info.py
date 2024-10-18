@@ -30,7 +30,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7425490417').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002284227206').split()]
-JOIN_CHANNELS = [int(-1002305942155), int(-1002439612344), int(-1002340520395)]
+JOIN_CHANNELS = [int(-1002247041357), int(-1001544569591)]
 PIRO_CHANNELS = [int(-1002323077913)]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
