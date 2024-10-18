@@ -152,11 +152,11 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                           [
                             [                            
-                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl'
                           ],[
-                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1
+                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1"
                           ],[     
-                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg=='
                            ]
                         ]
                     )
@@ -172,11 +172,11 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                           [
                             [                            
-                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl'
                           ],[
-                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1
+                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1"
                           ],[     
-                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg=='
                            ]
                         ]
                     )
@@ -193,11 +193,11 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(
                           [
                             [                            
-                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl'
                           ],[
-                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1
+                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1"
                           ],[     
-                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg=='
                            ]
                         ]
                     )
@@ -212,11 +212,11 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(
                           [
                             [                            
-                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl'
                           ],[
-                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1
+                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1"
                           ],[     
-                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg=='
                            ]
                         ]
                     )
@@ -276,11 +276,11 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(
                           [
                             [                            
-                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl'
                           ],[
-                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1
+                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1"
                           ],[     
-                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg=='
                            ]
                         ]
                     )
@@ -294,11 +294,11 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                           [
                             [                            
-                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl'
                           ],[
-                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1
+                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1"
                           ],[     
-                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg=='
                            ]
                         ]
                     )
@@ -348,11 +348,11 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
                           [
                             [                            
-                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl'
                           ],[
-                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1
+                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1"
                           ],[     
-                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg=='
                            ]
                         ]
                     )
@@ -363,11 +363,11 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
                           [
                             [                            
-                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl'
                           ],[
-                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1
+                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1"
                           ],[     
-                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg=='
                            ]
                         ]
                     )
@@ -381,11 +381,11 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
                           [
                             [                            
-                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl'
                           ],[
-                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1
+                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1"
                           ],[     
-                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg=='
                            ]
                         ]
                     )
