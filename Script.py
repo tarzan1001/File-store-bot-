@@ -1,11 +1,13 @@
 class script(object):
     START_TXT = """<b>𝖸𝗈 {}, 𝖭𝗂𝖼𝖾 𝖳𝗈 𝖬𝖾𝖾𝗍 𝖸𝗈𝗎 🎊
 
-<blockquote>𝖨'𝗆 𝖠 𝖡𝖺𝗍𝖼𝗁 𝖥𝗂𝗅𝖾 𝖲𝗍𝗈𝗋𝖾 & 𝖨𝗇𝗅𝗂𝗇𝖾 𝖥𝗂𝗅𝖾 𝖲𝖾𝖺𝗋𝖼𝗁 𝖡𝗈𝗍.</blockquote>
+<blockquote>𝖨'𝗆 𝖠 𝖡𝖺𝗍𝖼𝗁 𝖥𝗂𝗅𝖾 𝖲𝗍𝗈𝗋𝖾 & 𝖨𝗇𝗅𝗂𝗇𝖾 𝖥𝗂𝗅𝖾 𝖲𝖾𝖺𝗋𝖼𝗁 𝖡𝗈𝗍 ⚙</blockquote>
 
 𝖧𝗂𝗍 /joinchannels 𝖳𝗈 𝖦𝖾𝗍 𝖮𝗎𝗋 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖫𝗂𝗌𝗍𝗌.
 
-Chek for Latest Movies List /latest</b>
+Chek for Latest Movies List /latest
+
+️📌 𝗔𝗻𝘆 𝗛𝗲𝗹𝗽 𝗣𝗹𝗲𝗮𝘀𝗲 𝗖𝗼𝗻𝘁𝗮𝗰𝘁 𝗔𝗱𝗺𝗶𝗻 : @MCU_ADMIN_V1_BOT</b>
 """
 
     HELP_TXT = """<b>Hᴇʏ {} 𝖨𝖺𝗆 𝖧𝖺𝗉𝗉𝗒 🖤 𝖳𝗈 𝖧𝖺𝗏𝖾 𝖸𝗈𝗎
