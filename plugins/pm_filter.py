@@ -33,15 +33,7 @@ BUTTONS = {}
 
 SPELL_CHECK = {}
 
-DELETE_TXT = """‼️ 𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧 ‼️
-
-<blockquote>⚠️ 𝙁𝙞𝙡𝙚 𝙒𝙞𝙡𝙡 𝘽𝙚 𝘿𝙚𝙡𝙚𝙩𝙚𝙙 𝙄𝙣 𝟱 𝙈𝙞𝙣𝙪𝙩𝙚𝙨.</blockquote>
-
-𝗜𝗳 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝘁𝗵𝗲𝘀𝗲 𝗳𝗶𝗹𝗲𝘀, 𝗞𝗶𝗻𝗱𝗹𝘆 𝗙𝗼𝗿𝘄𝗮𝗿𝗱 𝘁𝗵𝗲𝘀𝗲 𝗳𝗶𝗹𝗲𝘀 𝘁𝗼 𝗮𝗻𝘆 𝗰𝗵𝗮𝘁 (𝘀𝗮𝘃𝗲𝗱) 𝗮𝗻𝗱 𝘀𝘁𝗮𝗿𝘁 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱...
-
-<blockquote>𝗙𝗼𝗿 𝗠𝗼𝗿𝗲 𝗤𝘂𝗮𝗹𝗶𝘁𝗮𝘁𝗶𝘃𝗲 𝗙𝗶𝗹𝗲𝘀 𝗨𝘀𝗲 𝗕𝗲𝗹𝗼𝘄 𝗕𝗼𝘁𝘀.</blockquote>
-
-𝗧𝗵𝗮𝗻𝗸 𝗬𝗼𝘂 :)"""
+DELETE_TXT = 
 
 @Client.on_message((filters.group | filters.private) & filters.text & filters.incoming)
 async def give_filter(client, message):
@@ -405,11 +397,33 @@ async def cb_handler(client: Client, query: CallbackQuery):
             file_id=file_id,
             caption=f_caption,
             protect_content=True if ident == 'checksubp' else False,
-            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f"https://t.me/MCUupdatesLINKS"),InlineKeyboardButton('⭕️ 𝐌𝐎𝐕𝐈𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1")]]))
+            reply_markup=InlineKeyboardMarkup(
+                          [
+                            [                            
+                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+                          ],[
+                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1
+                          ],[     
+                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+                           ]
+                        ]
+                    )
+    )    
         ok = await message.reply_text(
             text=script.DELETE_TXT,
             disable_web_page_preview=True,   
-            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f"https://t.me/MCUupdatesLINKS"),InlineKeyboardButton('⭕️ 𝐌𝐎𝐕𝐈𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1")]]))
+            reply_markup=InlineKeyboardMarkup(
+                          [
+                            [                            
+                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+                          ],[
+                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1
+                          ],[     
+                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+                           ]
+                        ]
+                    )
+    )    
         await asyncio.sleep(300)
         await f.delete()
         await ok.delete()
