@@ -17,7 +17,7 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-PICS = (environ.get('PICS', 'https://telegra.ph/file/39b86f6dc3e12c8976f2b.jpg https://telegra.ph/file/ba3a4e5685ffce4ee9fa2.jpg https://telegra.ph/file/2cad110c8592f881e347d.jpg https://telegra.ph/file/dac6509fb6689e5d8fb75.jpg https://telegra.ph/file/e748da46b2027988f8b01.jpg https://telegra.ph/file/62341d24b79470358f6bd.jpg https://telegra.ph/file/4780d98d162cbad0b49d8.jpg https://telegra.ph/file/8492c75920649eec4c204.jpg https://telegra.ph/file/8492c75920649eec4c204.jpg https://telegra.ph/file/64bc779495cecfe6c707d.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/eb2076910fc1faa2f1c61.jpg https://telegra.ph/file/c3f4699d4678f873e3986.jpg https://telegra.ph/file/aaef98ebba21f74d58b97.jpg https://telegra.ph/file/dcb9a1f6d71e422f880a6.jpg https://telegra.ph/file/bf5365c9a3a109b260552.jpg https://telegra.ph/file/3c51670082a64f6fa74f6.jpg https://telegra.ph/file/511e1b7f439a39b6ce89b.jpg https://telegra.ph/file/48facaa4f70faa38ccdf2.jpg https://telegra.ph/file/b9ccf34a299a8d55d12ff.jpg https://telegra.ph/file/16af79f52b612816eb4f7.jpg')).split()
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '19071424'))
 API_HASH = environ.get('API_HASH', 'c4b3e298cc50fd4cc563ae75ee882948')
