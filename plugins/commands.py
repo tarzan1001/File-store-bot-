@@ -104,11 +104,14 @@ async def start(client, message):
         return
     
     data = message.command[1]
-    if not file_id:
+    try:
+        pre, file_id = data.split('_', 1)
+    except:
         file_id = data
-    
+        pre = ""
     if data.split("-", 1)[0] == "BATCH":
-        sts = await message.reply("𝖥𝖾𝗍𝖼𝗁𝗂𝗇𝗀 𝖳𝗁𝖾 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝖾𝖽 𝖥𝗂𝗅𝖾𝗌.....\n𝖪𝗂𝗇𝖽𝗅𝗒 𝖶𝖺𝗂𝗍!!!!")
+        DL = []
+        sts = await message.reply("<b>Pʟᴇᴀsᴇ ᴡᴀɪᴛ...</b>")
         file_id = data.split("-", 1)[1]
         msgs = BATCH_FILES.get(file_id)
         if not msgs:
@@ -117,61 +120,78 @@ async def start(client, message):
                 with open(file) as file_data:
                     msgs=json.loads(file_data.read())
             except:
-                await sts.edit("FAILED")
-                return await client.send_message(LOG_CHANNEL, "UNABLE TO OPEN FILE.")
+                await sts.edit("Fᴀɪʟᴇᴅ")
+                return await client.send_message(LOG_CHANNEL, "Uɴᴀʙʟᴇ Tᴏ Oᴘᴇɴ Fɪʟᴇ.")
             os.remove(file)
             BATCH_FILES[file_id] = msgs
-        new_messages = []
         for msg in msgs:
             title = msg.get("title")
             size=get_size(int(msg.get("size", 0)))
             f_caption=msg.get("caption", "")
+            
             if BATCH_FILE_CAPTION:
                 try:
                     f_caption=BATCH_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
+                    
                 except Exception as e:
                     logger.exception(e)
                     f_caption=f_caption
+                    
             if f_caption is None:
                 f_caption = f"{title}"
+                
             try:
-                bj = await client.send_cached_media(
+                suz = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
-                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ 𝗣𝗜𝗥𝗢 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 ⚡️', url=f"https://t.me/piroxbots")] ] ))
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                         [
+                          InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS')
+                       ],[
+                          InlineKeyboardButton('⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️', url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS")
+                         ]
+                        ]
+                    )
+                )
+                DL.append(suz)
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
-                bj = await client.send_cached_media(
+                suz = await client.send_cached_media(
                     chat_id=message.from_user.id,
-                    file_id=msg.get("file_id"),
+                    file_id=msg.get("file_id"),   
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
-                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ 𝗣𝗜𝗥𝗢 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 ⚡️', url=f"https://t.me/piroxbots")] ] ))
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                         [
+                          InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/OTT_ARAKAL_THERAVAD_MOVIESS')
+                       ],[
+                          InlineKeyboardButton('⭕️ 𝗚𝗘𝗧 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞𝗦 ⭕️', url="https://t.me/ARAKAL_THERAVAD_GROUP_LINKS")
+                         ]
+                        ]
+                    )
+                )
+                DL.append(suz)
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
-            new_messages.append(bj)
             await asyncio.sleep(1) 
         await sts.delete()
-        ok = await message.reply_text(
-            text=script.DELETE_TXT,
-            disable_web_page_preview=True,   
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⚠️ 𝖡𝗈𝗍 1️⃣", url=f"https://t.me/pfautofilebot"),InlineKeyboardButton("⚠️ 𝖡𝗈𝗍 2️⃣", url=f"https://t.me/profilesv3bot")]]))
-        await asyncio.sleep(300)
-        for sodha in new_messages:
-            await sodha.delete()
-            await ok.delete()
-        await message.reply_text(
-            text="<b>Your File Has Been Deleted To Avoid BOT Ban.😇\nYou Can Request Again If You Want!🫵🏻</b>",
-            disable_web_page_preview=True,   
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👥 𝖴𝗉𝖽𝖺𝗍𝖾 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 💭", url=f"https://t.me/blaster_linkz")]]))
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
+        await asyncio.sleep(20)
+        for i in DL:
+            await i.delete()
+        await k.edit_text("<b>𝗬𝗼𝘂𝗿 𝗙𝗶𝗹𝗲𝘀 𝗛𝗮𝘃𝗲 𝗕𝗲𝗲𝗻 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗧𝗼 𝗔𝘃𝗼𝗶𝗱 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗜𝗻𝗳𝗿𝗶𝗻𝗴𝗲𝗺𝗲𝗻𝘁.</b>")
+        DL = []
         return
     
     elif data.split("-", 1)[0] == "DSTORE":
-        sts = await message.reply("𝖥𝖾𝗍𝖼𝗁𝗂𝗇𝗀 𝖳𝗁𝖾 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝖾𝖽 𝖥𝗂𝗅𝖾𝗌.....\n𝖪𝗂𝗇𝖽𝗅𝗒 𝖶𝖺𝗂𝗍!!!!")
+        DDL = []
+        sts = await message.reply("<b>Pʟᴇᴀsᴇ ᴡᴀɪᴛ...</b>")
         b_string = data.split("-", 1)[1]
         decoded = (base64.urlsafe_b64decode(b_string + "=" * (-len(b_string) % 4))).decode("ascii")
         try:
@@ -180,7 +200,6 @@ async def start(client, message):
             f_msg_id, l_msg_id, f_chat_id = decoded.split("_", 2)
             protect = "/pbatch" if PROTECT_CONTENT else "batch"
         diff = int(l_msg_id) - int(f_msg_id)
-        messages = list()
         async for msg in client.iter_messages(int(f_chat_id), int(l_msg_id), int(f_msg_id)):
             if msg.media:
                 media = getattr(msg, msg.media.value)
@@ -195,40 +214,40 @@ async def start(client, message):
                     file_name = getattr(media, 'file_name', '')
                     f_caption = getattr(msg, 'caption', file_name)
                 try:
-                    _m = await msg.copy(message.chat.id, caption=f_caption, protect_content=True if protect == "/pbatch" else False)
-                    messages.append(_m)
+                    sud = await msg.copy(message.chat.id, caption=f_caption, protect_content=True if protect == "/pbatch" else False)
+                    DDL.append(sud)
                 except FloodWait as e:
                     await asyncio.sleep(e.x)
-                    _m = await msg.copy(message.chat.id, caption=f_caption, protect_content=True if protect == "/pbatch" else False)
-                    messages.append(_m)
+                    sud = await msg.copy(message.chat.id, caption=f_caption, protect_content=True if protect == "/pbatch" else False)
+                    DDL.append(sud)
                 except Exception as e:
                     logger.exception(e)
                     continue
+                await asyncio.sleep(20)
+                for i in DDL:
+                    await i.delete()
+                DDL = []
             elif msg.empty:
                 continue
             else:
+                DZ = []
                 try:
-                    await msg.copy(message.chat.id, protect_content=True if protect == "/pbatch" else False)
+                    sux = await msg.copy(message.chat.id, protect_content=True if protect == "/pbatch" else False)
+                    DZ.append(sux)
                 except FloodWait as e:
                     await asyncio.sleep(e.x)
-                    await msg.copy(message.chat.id, protect_content=True if protect == "/pbatch" else False)
+                    sux = await msg.copy(message.chat.id, protect_content=True if protect == "/pbatch" else False)
+                    DZ.append(sux)
                 except Exception as e:
                     logger.exception(e)
                     continue
-            await asyncio.sleep(1)
-        await sts.delete()
-        ok = await message.reply_text(
-            text=script.DELETE_TXT,
-            disable_web_page_preview=True,   
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⚠️ 𝖡𝗈𝗍 1️⃣", url=f"https://t.me/pfautofilebot"),InlineKeyboardButton("⚠️ 𝖡𝗈𝗍 2️⃣", url=f"https://t.me/profilesv3bot")]]))
-        await asyncio.sleep(20)
-        for _m in messages:
-            await _m.delete()
-            await message.reply_text(
-                text="<b>Your File Has Been Deleted To Avoid BOT Ban.😇\nYou Can Request Again If You Want!🫵🏻</b>",
-                disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔰 𝖡𝖫𝖠𝖲𝖳𝖤𝖱 𝖫𝖨𝖭𝖪𝖹 🔰", url=f"https://t.me/blaster_linkz")]]))
-            return
+            await asyncio.sleep(1) 
+            await sts.delete()
+            await asyncio.sleep(20)
+            for i in DZ:
+                    await i.delete()
+            DZ = []
+        return 
 
     files_ = await get_file_details(file_id)           
     if not files_:
