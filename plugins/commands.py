@@ -287,7 +287,7 @@ async def start(client, message):
                         ]
                     )
     )    
-        await asyncio.sleep(200)
+        await asyncio.sleep(20)
         for _m in messages:
             await _m.delete()
             await message.reply_text(
