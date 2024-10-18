@@ -160,7 +160,7 @@ async def start(client, message):
             text=script.DELETE_TXT,
             disable_web_page_preview=True,   
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⚠️ 𝖡𝗈𝗍 1️⃣", url=f"https://t.me/pfautofilebot"),InlineKeyboardButton("⚠️ 𝖡𝗈𝗍 2️⃣", url=f"https://t.me/profilesv3bot")]]))
-        await asyncio.sleep(300)
+        await asyncio.sleep(20)
         for sodha in new_messages:
             await sodha.delete()
             await ok.delete()
@@ -275,7 +275,7 @@ async def start(client, message):
         text=script.DELETE_TXT,
         disable_web_page_preview=True,   
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⚠️ 𝖡𝗈𝗍 1️⃣", url=f"https://t.me/pfautofilebot"),InlineKeyboardButton("⚠️ 𝖡𝗈𝗍 2️⃣", url=f"https://t.me/profilesv3bot")]]))
-    await asyncio.sleep(300)
+    await asyncio.sleep(20)
     await f.delete()
     await ok.delete()
     await message.reply_text(
