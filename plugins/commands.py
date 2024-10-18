@@ -205,6 +205,7 @@ async def start(client, message):
                     )
     )    
         await asyncio.sleep(300)
+        await message.delete()
         for sodha in new_messages:
             await sodha.delete()
             await ok.delete()
@@ -386,7 +387,9 @@ async def start(client, message):
                     )
     )    
     await asyncio.sleep(300)
+    await message.delete()
     await f.delete()
+    await asyncio.sleep(300)
     await ok.delete()
     await message.reply_text(
         text="<b>Your File Has Been Deleted To Avoid BOT Ban.😇\nYou Can Request Again If You Want!🫵🏻</b>",
