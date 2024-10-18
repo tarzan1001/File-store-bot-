@@ -102,9 +102,12 @@ async def answer(bot, query):
                            switch_pm_parameter="okay")
 
 def get_reply_markup(query):
-    buttons = [[
-                    InlineKeyboardButton('⚡️ 𝖯𝖨𝖱𝖮 𝖴𝖯𝖣𝖠𝖳𝖤𝖲 ⚡️', url=f"https://t.me/piroxbots")
-                ],[
-                    InlineKeyboardButton('🔍 𝖲𝖾𝖺𝗋𝖼𝗁 𝖧𝖾𝗋𝖾', switch_inline_query_current_chat=query)
-                ]]
+    buttons = [[                        
+                   InlineKeyboardButton('🔍 𝖲𝖾𝖺𝗋𝖼𝗁 𝖧𝖾𝗋𝖾', switch_inline_query_current_chat=query)
+               ],[
+                  InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+            ],[
+                  InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 🖥", url="https://t.me/+mKFmz9pYLkc5Njhl")
+            
+        ]]    
     return InlineKeyboardMarkup(buttons)
