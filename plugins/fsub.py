@@ -114,7 +114,7 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
                         INVITE_LINK2 = invite_link
                     else:
                         invite_link = INVITE_LINK2
-                    text=f"""<b>𝖧𝖾𝗒...</b>{update.from_user.mention} 🙋‍♂️ \n\n𝖢𝗅𝗂𝖼𝗄 𝖳𝗁𝖾 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗧𝗼 𝗝𝗼𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 𝖠𝗇𝖽 𝖯𝗎𝗍 𝖱𝖾𝗊𝗎𝖾𝗌𝗍,\n𝖳𝗁𝖾𝗇 𝖸𝗈𝗎 𝖶𝗂𝗅𝗅 𝖦𝖾𝗍 𝖥𝗂𝗅𝖾.....😁\n\n[𝗧𝘂𝘁𝗼𝗿𝗶𝗮𝗹 𝗩𝗶𝗱𝗲𝗼](https://t.me/piro_tuts)</b>"""
+                    text=f"""<b>𝖧𝖾𝗒...</b>{update.from_user.mention} 🙋‍♂️ \n\n𝖢𝗅𝗂𝖼𝗄 𝖳𝗁𝖾 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗧𝗼 𝗝𝗼𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 𝖠𝗇𝖽 𝖯𝗎𝗍 𝖱𝖾𝗊𝗎𝖾𝗌𝗍,\n𝖳𝗁𝖾𝗇 𝖸𝗈𝗎 𝖶𝗂𝗅𝗅 𝖦𝖾𝗍 𝖥𝗂𝗅𝖾.....😁</b>"""
                     buttons = [
                         [
                             InlineKeyboardButton("📢 𝖱𝖾𝗊𝗎𝖾𝗌𝗍 𝖳𝗈 𝖩𝗈𝗂𝗇 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 📢", url=invite_link)
@@ -255,7 +255,7 @@ async def send_file(client, message, ident, file_id):
     await asyncio.sleep(210)
     await message.delete()
     await da.delete()
-    await asyncio.sleep(90)
+    await asyncio.sleep(210)
     await ok.delete()
     await message.reply_text(
          text="<b>Your File Has Been Deleted To Avoid BOT Ban.😇\nYou Can Request Again If You Want!🫵🏻</b>",
