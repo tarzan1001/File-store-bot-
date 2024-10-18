@@ -43,7 +43,7 @@ Chek for Latest Movies List /latest
 
 <blockquote>More updates join ott channel and Movie group!!!</blockquote>
 
-𝗧𝗵𝗮𝗻𝗸 𝗬𝗼𝘂 :)<\b>"""
+𝗧𝗵𝗮𝗻𝗸 𝗬𝗼𝘂 :)</b>"""
 
 @Client.on_message((filters.group | filters.private) & filters.text & filters.incoming)
 async def give_filter(client, message):
