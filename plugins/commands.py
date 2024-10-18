@@ -30,6 +30,8 @@ fdb = fclient[DATABASE_NAME]
 indb = inclient[DATABASE_NAME]
 fcol = fdb['forward']
 
+infile = indb['file_reply_text']
+
 BATCH_FILES = {}
 
 DELETE_TXT = """<b>‼️ 𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧 ‼️
