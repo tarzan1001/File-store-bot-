@@ -37,7 +37,7 @@ class script(object):
 
 /deletefiles - Movie name all Files delete 
 
-/latest - latest movie name edite
+/file_text - latest movie name edite
 
 /ping - Bot Speed , Cpu etc
 
