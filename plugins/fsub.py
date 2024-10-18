@@ -238,7 +238,18 @@ async def send_file(client, message, ident, file_id):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f"https://t.me/MCUupdatesLINKS"),InlineKeyboardButton('⭕️ 𝐌𝐎𝐕𝐈𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1")]]))
+        reply_markup=InlineKeyboardMarkup(
+                          [
+                            [                            
+                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+                          ],[
+                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1
+                          ],[     
+                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+                           ]
+                        ]
+                    )
+    )    
     replied = ok.id    
     da = await message.reply(DELETE_TXT, reply_to_message_id=replied)
     await asyncio.sleep(210)
@@ -249,6 +260,16 @@ async def send_file(client, message, ident, file_id):
     await message.reply_text(
          text="<b>Your File Has Been Deleted To Avoid BOT Ban.😇\nYou Can Request Again If You Want!🫵🏻</b>",
          disable_web_page_preview=True, 
-         reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f"https://t.me/MCUupdatesLINKS"),InlineKeyboardButton('⭕️ 𝐌𝐎𝐕𝐈𝐄 𝐆𝐑𝐎𝐔𝐏 𝐋𝐈𝐍𝐊 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1")]
-         ]))
+         reply_markup=InlineKeyboardMarkup(
+                          [
+                            [                            
+                            InlineKeyboardButton('🖥 𝗡𝗘𝗪 𝗢𝗧𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 🖥', url=f'https://t.me/+mKFmz9pYLkc5Njhl')
+                          ],[
+                            InlineKeyboardButton('⭕️ 𝗠𝗢𝗩𝗜𝗘 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ⭕️', url="https://t.me/+JRWRXAzDwkc2NDA1
+                          ],[     
+                            InlineKeyboardButton("🖥 𝐎𝐓𝐓 𝐈𝐍𝐒𝐓𝐆𝐑𝐀𝐌 🖥", url='https://www.instagram.com/new_ott__updates?igsh=MTMxcmhwamF4eGp6eg==')
+                           ]
+                        ]
+                    )
+    )    
     return
