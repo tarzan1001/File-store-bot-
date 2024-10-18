@@ -252,10 +252,10 @@ async def send_file(client, message, ident, file_id):
     )    
     replied = ok.id    
     da = await message.reply(DELETE_TXT, reply_to_message_id=replied)
-    await asyncio.sleep(210)
+    await asyncio.sleep(300)
     await message.delete()
     await da.delete()
-    await asyncio.sleep(210)
+    await asyncio.sleep(300)
     await ok.delete()
     await message.reply_text(
          text="<b>Your File Has Been Deleted To Avoid BOT Ban.😇\nYou Can Request Again If You Want!🫵🏻</b>",
