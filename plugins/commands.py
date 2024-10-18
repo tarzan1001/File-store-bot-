@@ -119,7 +119,7 @@ async def start(client, message):
         file_id = data
     
     if data.split("-", 1)[0] == "BATCH":
-        sts = await message.reply("𝖥𝖾𝗍𝖼𝗁𝗂𝗇𝗀 𝖳𝗁𝖾 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝖾𝖽 𝖥𝗂𝗅𝖾𝗌.....\n𝖪𝗂𝗇𝖽𝗅𝗒 𝖶𝖺𝗂𝗍!!!!")
+        sts = await message.reply("LODGING...!!!")
         file_id = data.split("-", 1)[1]
         msgs = BATCH_FILES.get(file_id)
         if not msgs:
@@ -287,7 +287,7 @@ async def start(client, message):
                         ]
                     )
     )    
-        await asyncio.sleep(20)
+        await asyncio.sleep(200)
         for _m in messages:
             await _m.delete()
             await message.reply_text(
