@@ -30,15 +30,15 @@ fcol = fdb['forward']
 
 BATCH_FILES = {}
 
-DELETE_TXT = """‼️ 𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧 ‼️
+DELETE_TXT = """<b>‼️ 𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧 ‼️
 
 <blockquote>⚠️ 𝙁𝙞𝙡𝙚 𝙒𝙞𝙡𝙡 𝘽𝙚 𝘿𝙚𝙡𝙚𝙩𝙚𝙙 𝙄𝙣 𝟱 𝙈𝙞𝙣𝙪𝙩𝙚𝙨.</blockquote>
 
 𝗜𝗳 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝘁𝗵𝗲𝘀𝗲 𝗳𝗶𝗹𝗲𝘀, 𝗞𝗶𝗻𝗱𝗹𝘆 𝗙𝗼𝗿𝘄𝗮𝗿𝗱 𝘁𝗵𝗲𝘀𝗲 𝗳𝗶𝗹𝗲𝘀 𝘁𝗼 𝗮𝗻𝘆 𝗰𝗵𝗮𝘁 (𝘀𝗮𝘃𝗲𝗱) 𝗮𝗻𝗱 𝘀𝘁𝗮𝗿𝘁 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱...
 
-<blockquote>𝗙𝗼𝗿 𝗠𝗼𝗿𝗲 𝗤𝘂𝗮𝗹𝗶𝘁𝗮𝘁𝗶𝘃𝗲 𝗙𝗶𝗹𝗲𝘀 𝗨𝘀𝗲 𝗕𝗲𝗹𝗼𝘄 𝗕𝗼𝘁𝘀.</blockquote>
+Chek for New Movies List /latest
 
-𝗧𝗵𝗮𝗻𝗸 𝗬𝗼𝘂 :)"""
+𝗧𝗵𝗮𝗻𝗸 𝗬𝗼𝘂 :)<\b>"""
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
@@ -373,7 +373,54 @@ async def delete(bot, message):
         return
 
     await msg.edit('File is successfully deleted from the database')
-
+    
+@Client.on_message(filters.command("latest") & filters.incoming)
+async def latest(client, message):   
+    
+    text_data = infile.find_one({"_id": "file_text"})
+    if not text_data:
+        return
+    text = text_data.get(f"text")
+    if text == "off":          
+        return
+    else:
+        await message.reply_text(f"{text}")
+        
+@Client.on_message(filters.command('file_text') & filters.user(ADMINS))
+async def set_file_text_command(client, message):
+    await message.react("😍")
+    text_data = infile.find_one({"_id": "file_text"})    
+    if len(message.command) == 1:        
+        if not text_data:
+            await message.reply("You don't have any text")
+            return
+        text = text_data.get("text")
+        if text == "off":
+            await message.reply("You don't have any text")
+            return
+        else:
+            await message.reply(f"current text is\n\n {text}")
+            return 
+    else:
+        text = message.text.split(" ", 1)[1]
+        if text == "off":
+            if not text_data:                    
+                await message.reply(f"Text have Deleted.")
+            else:
+                infile.update_one(
+                    {"_id": "file_text"},
+                    {"$set": {"text": "off"}},
+                    upsert=True
+                )
+                await message.reply("Text have Deleted.")
+        else:
+            infile.update_one(
+                    {"_id": "file_text"},
+                    {"$set": {"text": text}},
+                    upsert=True
+            )
+            await message.reply("Saved buddy 😁.")
+            
 @Client.on_message(filters.command('deleteall') & filters.user(ADMINS))
 async def delete_all_index(bot, message):
     await message.reply_text(
