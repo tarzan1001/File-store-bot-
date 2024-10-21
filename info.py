@@ -21,7 +21,7 @@ PICS = (environ.get('PICS', 'https://telegra.ph/file/eb2076910fc1faa2f1c61.jpg h
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '19071424'))
 API_HASH = environ.get('API_HASH', 'c4b3e298cc50fd4cc563ae75ee882948')
-BOT_TOKEN = environ.get('BOT_TOKEN', '7697119880:AAHE3IXLG_pT3VOYgmcwfVUC3WK7XIZ0THs')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7697119880:AAFwcq_DVMsNEgShmV9eB2XIxUxCO9QmwMg')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
